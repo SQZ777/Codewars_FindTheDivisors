@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_FindTheDivisors
@@ -15,14 +16,21 @@ namespace Codewars_FindTheDivisors
         [TestMethod]
         public void Input_4_Should_Be_2()
         {
-            Assert.AreEqual(new int[]{2},Kata.Divisors(4));
+            CollectionAssert.AreEqual(new int[] { 2 }, Kata.Divisors(4));
         }
     }
 
     public class Kata
     {
-        public static int[] Divisors(int ints)
+        public static int[] Divisors(int num)
         {
+            for (int i = 2; i <= num / 2; i++)
+            {
+                if (num % i == 0)
+                {
+                    return new int[] { i };
+                }
+            }
             return null;
         }
     }

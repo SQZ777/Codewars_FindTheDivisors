@@ -18,6 +18,12 @@ namespace Codewars_FindTheDivisors
         {
             CollectionAssert.AreEqual(new int[] { 2 }, Kata.Divisors(4));
         }
+
+        [TestMethod]
+        public void Input_6_Should_Be_2and3()
+        {
+            CollectionAssert.AreEqual(new int[] { 2, 3 }, Kata.Divisors(6));
+        }
     }
 
     public class Kata
@@ -32,6 +38,8 @@ namespace Codewars_FindTheDivisors
                 }
             }
             return null;
+            var result = Enumerable.Range(2, num / 2).Where(x => num % x == 0).ToArray();
+            return result.Length > 0 ? result : null;
         }
     }
 }

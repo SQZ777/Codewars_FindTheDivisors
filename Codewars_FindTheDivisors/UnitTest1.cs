@@ -17,7 +17,7 @@ namespace Codewars_FindTheDivisors
     {
         public static int[] Divisors(int ints)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

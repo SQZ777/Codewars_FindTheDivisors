@@ -31,6 +31,12 @@ namespace Codewars_FindTheDivisors
         {
             CollectionAssert.AreEqual(new int[] { 3, 5 }, Kata.Divisors(15));
         }
+
+        [TestMethod]
+        public void Input_16_Should_Be2and4and8()
+        {
+            CollectionAssert.AreEqual(new int[] { 2, 4, 8 }, Kata.Divisors(16));
+        }
     }
 
     public class Kata

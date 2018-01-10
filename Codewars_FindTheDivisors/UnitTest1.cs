@@ -11,6 +11,12 @@ namespace Codewars_FindTheDivisors
         {
             Assert.IsNull(Kata.Divisors(0));
         }
+
+        [TestMethod]
+        public void Input_4_Should_Be_2()
+        {
+            Assert.AreEqual(new int[]{2},Kata.Divisors(4));
+        }
     }
 
     public class Kata

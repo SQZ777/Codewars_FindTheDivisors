@@ -25,6 +25,12 @@ namespace Codewars_FindTheDivisors
         {
             CollectionAssert.AreEqual(new int[] { 2, 3 }, Kata.Divisors(6));
         }
+
+        [TestMethod]
+        public void Input_15_Should_Be_3and5()
+        {
+            CollectionAssert.AreEqual(new int[] { 3, 5 }, Kata.Divisors(15));
+        }
     }
 
     public class Kata

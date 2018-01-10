@@ -43,15 +43,23 @@ namespace Codewars_FindTheDivisors
         {
             CollectionAssert.AreEqual(new int[] { 11, 23 }, Kata.Divisors(253));
         }
-
     }
 
     public class Kata
     {
         public static int[] Divisors(int num)
         {
-            var result = Enumerable.Range(2, num / 2).Where(x => num % x == 0).ToArray();
-            return result.Length > 0 ? result : null;
+            var result = new List<int>();
+            for (int i = 2; i * i <= num; i++)
+            {
+                if (num % i == 0)
+                {
+                    result.Add(i);
+                    if (num / i != i)
+                        result.Add(num / i);
+                }
+            }
+            return result.Count > 0 ? result.OrderBy(x => x).ToArray() : null;
         }
     }
 }

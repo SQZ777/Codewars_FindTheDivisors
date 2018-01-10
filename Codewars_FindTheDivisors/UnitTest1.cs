@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_FindTheDivisors
@@ -6,8 +7,17 @@ namespace Codewars_FindTheDivisors
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_0_Should_Be_Null()
         {
+            Assert.IsNull(Kata.Divisors(0));
+        }
+    }
+
+    public class Kata
+    {
+        public static int[] Divisors(int ints)
+        {
+            throw new NotImplementedException();
         }
     }
 }

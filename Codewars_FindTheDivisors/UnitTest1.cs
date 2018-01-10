@@ -31,15 +31,8 @@ namespace Codewars_FindTheDivisors
     {
         public static int[] Divisors(int num)
         {
-            var result = new List<int>();
-            for (int i = 2; i <= num / 2; i++)
-            {
-                if (num % i == 0)
-                {
-                    result.Add(i);
-                }
-            }
-            return result.Count > 0 ? result.ToArray() : null;
+            var result = Enumerable.Range(2, num / 2).Where(x => num % x == 0).ToArray();
+            return result.Length > 0 ? result : null;
         }
     }
 }
